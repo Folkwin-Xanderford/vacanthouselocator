@@ -1,2 +1,2 @@
 # vacanthouselocator
-Find vacant houses where you are
+Bringing vacant houses closer to you
