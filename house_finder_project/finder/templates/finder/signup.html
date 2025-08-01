@@ -1,0 +1,199 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manager Register</title>
+  <!--
+  <link rel="stylesheet" href="{% static 'finder/signup.css' %}">
+-->
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #cfd9df);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  padding-top: 20px;
+}
+
+.register-container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 2000px;
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+form{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+}
+.register-subcontainer{
+  display: grid;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #555;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.terms input[type="checkbox"] {
+  margin-top: 4px;
+}
+
+.terms a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+button {
+
+  padding: 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px)  , (max-width: 600px){
+  body{
+    padding-top: 250px;
+  }
+  .register-container {
+    padding: 30px 20px;
+    justify-content: center;
+  }
+
+  form{
+    display: grid;
+    justify-content: center;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+  </style>
+  
+</head>
+<body>
+  <div class="register-container">
+    <h2>Register as Manager</h2>                                  
+    <form>
+          <section class="register-input-section" >
+                <div class="register-subcontainer" id="register-subcontainer-one" > 
+                      <label for="first-name">First Name</label>
+                      <input type="text" id="first-name" required>
+
+                      <label for="other-name">Other Name</label>       
+                      <input type="text" id="other-name" required>
+
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" id="phone" required>
+                </div>
+          </section>
+          <section class="register-input-section" id="register-input-section-two" >     
+                <div class="register-subcontainer" id="register-subcontainer-two" >
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                        
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" required>
+                        
+                        <div class="terms">
+                              <input type="checkbox" id="terms" required>
+                              <label for="terms">
+                                I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+                              </label> 
+                              <button type="submit">Register</button>
+                        </div>
+                        <div class="login-link">
+            Already have an account? <a href="{% url 'login' %}">Login</a>
+          </div>
+              </div>
+          </section>
+          </div>  
+
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fa;
+  color: #333;
+}
+
+header {
+  background: #1e90ff;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 2em;
+}
+
+.hero {
+  text-align: center;
+  padding: 2em 0;
+}
+
+.cta-buttons {
+  margin-top: 1.5em;
+}
+
+.btn {
+  background: #1e90ff;
+  color: white;
+  padding: 0.75em 1.5em;
+  margin: 0 0.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #1c86ee;
+}
+
+.filters input {
+  padding: 0.5em;
+  margin: 0.25em;
+  width: 300px;
+  margin-top: 10px;
+}
+
+.filters textarea{
+    resize: none;
+    height: 50px;
+    width: 310px;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom:  10px;
+}
+
+.filters textarea:focus , .filters input:focus {
+    outline: none;
+    border-radius: 6px 2px 6px 2px;
+    border-color: #1c86ee;
+}
+
+.filters button {
+  padding: 0.5em 1em;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 320px;
+}
+
+.filters {
+  margin-bottom: 1em;
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+}

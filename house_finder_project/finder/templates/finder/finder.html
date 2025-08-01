@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Vacant Houses</title>
+  <link rel="stylesheet" href="{% static 'finder/finder.css' %}" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>Search for Vacant Houses</h1>
+  </header>
+  <main>
+    <section class="filters">
+      <h2>Fill the following boxes for a avacant search</h2>
+      <input type="number" id="minPrice" placeholder="Min Price" />
+      <input type="number" id="maxPrice" placeholder="Max Price" />
+        <input type="text" id="place_name" placeholder="Place Name" >
+        <textarea id="house_properties_textarea" placeholder="Enter House Properties&#10;Eg: 2 bedrooms , roadside" ></textarea>
+        <button id="search_by_house_properties_btn" >Search</button>  
+    </section>
+    <section class="results">
+      <div id="vacant_details"></div>
+      <div id="map" style="height: 400px;"></div>
+      <ul id="propertyList"></ul>
+    </section>
+  </main>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
